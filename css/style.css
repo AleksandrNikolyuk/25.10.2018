@@ -1,0 +1,125 @@
+
+.wrap {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    width: 90%;
+    height: 75px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.header_image {
+    width: 35%;
+    display: flex;
+    background: url(../logo.jpg) no-repeat;
+    background-size: contain;
+}
+.header_items {
+    margin-left: 130px;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+}
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+.firstRow {
+    min-height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardBlock {
+    padding: 50px 30px;
+    display: flex;
+    width: 430px;
+    min-height: 430px;
+    position: relative;
+    box-sizing: border-box;
+    background: url(../222.jpg);
+    background-size: cover;
+}
+.leftCardBlock {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+h2 {
+    font-size: 34px;
+}
+.rightCardBlock {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.cardsName {
+    width: 140px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #0090ff;
+}
+.buyCard {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #24badd;
+}
+.priceCard {
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 24px;
+    background: yellow;
+}
+
+@media (max-width: 1720px) {
+    .cardBlock:nth-child(4) {
+        min-height: 130px;
+        padding: 20px; 
+    }
+}
+
+@media (max-width: 1290px) {
+    .cardBlock:nth-child(4) {
+        padding: 20px;
+        min-height: 130px;
+   }
+   .cardBlock:nth-child(3) {
+        padding: 20px;
+        min-height: 130px;
+   }
+}
+
+@media (max-width: 860px) {
+    .cardBlock:nth-child(4) {
+        padding: 20px;
+        min-height: 130px;
+    }
+    .cardBlock:nth-child(3) {
+        padding: 20px;
+        min-height: 130px;
+    }
+    .cardBlock:nth-child(2) {
+        padding: 20px;
+        min-height: 130px;
+    }
+}
