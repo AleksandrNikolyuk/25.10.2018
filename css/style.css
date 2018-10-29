@@ -4,11 +4,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 .header {
     width: 90%;
     height: 75px;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     display: flex;
     flex-direction: row;
 }
@@ -19,8 +20,8 @@
     background-size: contain;
 }
 .header_items {
-    margin-left: 130px;
     width: 65%;
+    margin-left: 130px;
     display: flex;
     justify-content: space-around;
 }
@@ -31,17 +32,19 @@ a {
     font-size: 18px;
     color: black;
 }
-.firstRow {
+.container {
+    margin: 0 auto;
     min-height: 430px;
     display: flex;
     flex-wrap: wrap;
+
 }
 .cardBlock {
     padding: 50px 30px;
     display: flex;
+    justify-content: center;
     width: 430px;
     min-height: 430px;
-    position: relative;
     box-sizing: border-box;
     background: url(../222.jpg);
     background-size: cover;
@@ -53,7 +56,11 @@ a {
     color: #fff;
 }
 h2 {
+    margin: 15px 0;
     font-size: 34px;
+}
+p {
+    margin: 0;
 }
 .rightCardBlock {
     width: 50%;
@@ -71,14 +78,28 @@ h2 {
     border-radius: 5px;
     background: #0090ff;
 }
+.buy {
+    display: flex;
+    flex-direction: row;
+    
+}
 .buyCard {
-    width: 120px;
+    width: 80px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     background: #24badd;
+    border-radius: 5px 0 0 5px;
+}
+
+.buyForm {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 40px solid #24badd;
+    border-bottom: 20px solid transparent;
 }
 .priceCard {
     width: 90px;
@@ -92,13 +113,41 @@ h2 {
 }
 
 @media (max-width: 1720px) {
+    .container {
+        max-width: 1290px;
+        margin: 0 auto;
+    }
     .cardBlock:nth-child(4) {
         min-height: 130px;
-        padding: 20px; 
+        padding: 20px;
     }
 }
-
+@media (max-width: 1440px) {
+    a {
+        font-size: 14px;
+    }
+}
 @media (max-width: 1290px) {
+    .container {
+        max-width: 860px;
+        margin: 0 auto;
+    }
+    .header {
+        max-width: 860px;
+        margin: 0 auto;
+    }
+    a {
+        display: none;
+    }
+    .header_items {
+        width: 10%;
+        margin-top: 20px;
+        margin-left: 400px;
+        background: url(../menu.svg) no-repeat;
+    }
+    .header_image {
+        width: 90%;
+    }
     .cardBlock:nth-child(4) {
         padding: 20px;
         min-height: 130px;
@@ -110,6 +159,10 @@ h2 {
 }
 
 @media (max-width: 860px) {
+    .container {
+        max-width: 430px;
+        margin: 0 auto;
+    }
     .cardBlock:nth-child(4) {
         padding: 20px;
         min-height: 130px;
